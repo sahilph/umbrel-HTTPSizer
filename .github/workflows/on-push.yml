@@ -147,7 +147,7 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           context: ./umbrel-1.2.2/
-          file: ./containers/app-auth/Dockerfile
+          file: ./umbrel-1.2.2/containers/app-auth/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta-app-auth.outputs.tags }}
           labels: ${{ steps.meta-app-auth.outputs.labels }}

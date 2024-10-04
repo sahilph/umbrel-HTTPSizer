@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <img src="https://<%= hostname %>/images/ssl-icon.svg" onerror="window.location.replace('/https-error');" />
+    <!-- <img src="https://<%= hostname %>/images/ssl-icon.svg" onerror="alert('Unable to load https image');" /> -->
+    <p> HTTPS is working Fine !!</p>
+
+  </body>
+</html>

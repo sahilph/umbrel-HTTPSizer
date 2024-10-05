@@ -5,8 +5,9 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 var favicon = require('serve-favicon')
 
+const CONSTANTS = require('./utils/const.js');
+
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 const firstRunRouter = require('./routes/firstRun');
 const httpsErrorRouter = require('./routes/httpsError');
 
@@ -25,9 +26,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/first-run', firstRunRouter);
 app.use('/https-error', httpsErrorRouter);
+
+app.get('/ssl.cert', function(req, res){
+  res.download(CONSTANTS.HTTPS_CERT_PATH); // Set disposition and send it.
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -21,7 +21,6 @@ module.exports = Object.freeze({
 
     APP_DATA_PATH: process.env.APP_DATA_PATH || "/app-data",
 
-    HTTPS_KEY_PATH: readFromFsOrTerminate(process.env.HTTPS_KEY_PATH || "/ssl/ssl.key"),
     HTTPS_CERT_PATH: readFromFsOrTerminate(process.env.HTTPS_CERT_PATH || "/ssl/ssl.cert"),
 
 });

@@ -1,15 +1,98 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <img src="https://<%= hostname %>/images/ssl-icon.svg" onerror="window.location.replace('/https-error');" />
-    <!-- <img src="https://<%= hostname %>/images/ssl-icon.svg" onerror="alert('Unable to load https image');" /> -->
-    <p> HTTPS is working Fine !!</p>
+	<head>
+		<title><%= title %></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-  </body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo">
+						<img width="10%" src="https://<%= hostname %>/images/logo.svg" onerror="window.location.replace('/https-error');"  /> 						</span>
+						<h1><%= title %></h1>
+						<p>If you are seeing this page that means self-signed HTTPS is working properly.</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#status" class="active">Status</a></li>
+							<li><a href="#faq">FAQs</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Status -->
+							<section id="status" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>HTTPS Status</h2>
+										</header>
+										<p>If you are seeing this page that means HTTPS is working properly.
+                                        Your browser is recognizing the self-signed certificate. You are ready to use
+                                          Umbrel on HTTPS for your local network.
+                                        </p>
+                                        <ul class="actions">
+											<li><a href="/ssl.cert" class="button"><i class="fa-solid fa-lock" style="color: #74C0FC;"></i> Download CA Cert</a></li>
+											<li><a href="/first-run?redirectHome=false" class="button"><i class="fa-solid fa-display"></i> Re-show First Run Page</a></li>
+										</ul>
+
+									</div>
+									<span class="icon solid major fa-solid fa-check" style="color: #4dea39;"></span>
+								</div>
+							</section>
+
+						<!-- FAQ -->
+							<section id="faq" class="main special">
+								<header class="major">
+									<h2>FAQs</h2>
+								</header>
+								<ol class="alt" style="text-align: left;">
+									<li>
+										<h3>How to I go back to the original HTTP version ?</h3>
+										<p>Thats easy! Just uninstall this app and it will restore all the original settings.</p>
+									</li>
+                                    <li>
+										<h3>Where can I report any issues</h3>
+										<p>You can report issues on: <a href="https://github.com/sahilph/umbrel-HTTPSizer/issues">https://github.com/sahilph/umbrel-HTTPSizer/issues</a> </p>
+									</li>
+
+								</ol>
+							</section>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy;Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
 </html>

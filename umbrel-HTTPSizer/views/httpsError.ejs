@@ -1,14 +1,78 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <h1>This is the HTTPS Error Page</h1>
-    <p>Welcome to <%= title %> </p>
+	<head>
+		<title><%= title %></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-  </body>
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><span class="fa-solid fa-xmark-circle fa-2xl" style="color: #ff0000;font-size: 4.5em;"></span></span>
+						<h1><%= title %></h1>
+						<p><strong>Some Error Occured in loading HTTPS. More info below.</strong></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#status" class="active">Status</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Status -->
+							<section id="status" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>HTTPS Status - Error!</h2>
+										</header>
+										<p>The app was installed but some Error has occurred and the site was not
+                                          loaded over HTTPS.
+                                        </p>
+                                      <p>Please <strong>Restart Umbrel</strong> and try again by Clicking the button below.
+                                        </p>
+                                        <ul class="actions">
+											<li><a href="//<%= hostname_wo_port %>/settings?dialog=restart" target="_blank" class="button"><i class="fa-solid fa-arrows-rotate" style="color: #790a0a;"></i> Restart Umbrel</a></li>
+											<li><a href="https://<%= hostname %>/" class="button"><i class="fa-solid fa-house"> </i> Go to Home Page</a></li>
+										</ul>
+
+									</div>
+									<span class="icon solid major fa-solid fa-xmark-circle" style="color: #ff0000;font-size: 4em;"></span>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy;Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
 </html>

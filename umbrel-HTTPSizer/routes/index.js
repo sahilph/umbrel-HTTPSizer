@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
-var path = require('path');
+const path = require('path');
 const CONSTANTS = require('../utils/const.js');
 
 /* GET home page. */

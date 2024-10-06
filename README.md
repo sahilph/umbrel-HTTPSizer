@@ -29,6 +29,21 @@
 
 This app can be installed in one click  from my [Community App store](https://github.com/sahilph/sahil-umbrel-apps)
 
+After Installation, a "First Run" page will be displayed with instructions on what to do next. It also has instructions on how to trust the generated root CA cerificate so that you will not get errors on your browser. More info available [in the wiki](https://github.com/sahilph/umbrel-HTTPSizer/wiki)
+
+⚠️ Note: This app is in beta phase. It modifies Umbrel's core files. Please use with caution. Going back to the non-HTTP version is not yet possible via GUI.  ⚠️
+
+⚠️ Note 2: Do not use this app to expose your Umbrel device to the Internet. This is only for securing Umbrel in your local network. ⚠️
+
+## How it works?
+
+1. After installation, the app generates self-signed certificates on your device.
+2. It then modifies Umbrel's certain core files, and uses modified docker images for the app-proxy and app-auth services, which allows them to listen for HTTPS requests.
+3. It also creates backup of the orginal files, just in case...!!!
+
+## Requirements
+Tested with Umbrel OS v1.2.2
+
 ## Contributing
 
 We welcome and appreciate new contributions!

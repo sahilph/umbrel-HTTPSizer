@@ -29,8 +29,8 @@ app.use('/', indexRouter);
 app.use('/first-run', firstRunRouter);
 app.use('/https-error', httpsErrorRouter);
 
-app.get('/ssl.cert', function(req, res){
-  res.download(CONSTANTS.HTTPS_CERT_PATH); // Set disposition and send it.
+app.get('/root-ca.crt', function(req, res){
+  res.download(CONSTANTS.HTTPS_ROOT_CA_CERT_PATH); // Set disposition and send it.
 });
 
 // catch 404 and forward to error handler

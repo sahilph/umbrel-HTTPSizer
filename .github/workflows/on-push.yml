@@ -5,7 +5,10 @@ name: Build and publish Docker image on push
 # separate terms of service, privacy policy, and support
 # documentation.
 
-on: push
+on:
+  push:
+    branches:
+      - '**'
 
 env:
   # Use docker.io for Docker Hub if empty

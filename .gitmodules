@@ -1,3 +1,6 @@
 [submodule "umbrel-1.2.2"]
 	path = umbrel-1.2.2
 	url = https://github.com/sahilph/umbrel.git
+[submodule "umbrel-v1.4.2"]
+	path = umbrel-v1.4.2
+	url = https://github.com/sahilph/umbrel.git

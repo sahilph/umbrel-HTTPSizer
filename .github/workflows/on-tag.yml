@@ -135,7 +135,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64,linux/arm64
-          context: ./umbrel-1.2.2/containers/app-proxy/
+          context: ./umbrel-v1.4.2/containers/app-proxy/
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta-app-proxy.outputs.tags }}
           labels: ${{ steps.meta-app-proxy.outputs.labels }}
@@ -149,8 +149,8 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64,linux/arm64
-          context: ./umbrel-1.2.2/
-          file: ./umbrel-1.2.2/containers/app-auth/Dockerfile
+          context: ./umbrel-v1.4.2/
+          file: ./umbrel-v1.4.2/containers/app-auth/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta-app-auth.outputs.tags }}
           labels: ${{ steps.meta-app-auth.outputs.labels }}
